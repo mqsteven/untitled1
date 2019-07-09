@@ -7,6 +7,10 @@ import java.util.Map;
  */
 public class OneHome {
 
+
+
+
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
         int[] i=new int[]{1,2,3,5,2,6,4,4};
@@ -14,6 +18,9 @@ public class OneHome {
         System.out.println(ints[0]+"   "+ints[1]);
     }
 
+    public String check(String s,String s2){
+        return "";
+    }
     /**
      * 两次循环
      * @param nums
