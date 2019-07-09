@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class OneHome {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -9,6 +9,30 @@ public class Main {
         int[] ints = twoSum2(i, 11);
         System.out.println(ints[0]+"   "+ints[1]);
     }
+
+    /**
+     * 两次循环
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == target - nums[i]) {
+                    return new int[] { i, j };
+                }
+            }
+        }
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
+    /**
+     * hashMap算法循环两次
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int[] twoSum1(int[] nums, int target) {
         Map<Integer,Integer> map=new HashMap<>();
         for (int i=0;i<nums.length;i++){
@@ -23,6 +47,13 @@ public class Main {
 
         return new int[]{};
     }
+
+    /**
+     * hashmap算法
+     * @param nums
+     * @param target
+     * @return
+     */
     public static int[] twoSum2(int[] nums, int target) {
         Map<Integer,Integer> map =new HashMap<>();
         for (int i = 0; i <nums.length ; i++) {
@@ -34,6 +65,8 @@ public class Main {
         }
         return null;
     }
+
+
 }
 
 
